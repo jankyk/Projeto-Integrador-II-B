@@ -1,4 +1,5 @@
-import os
+import os #importa parametros do windows
+
 #Funcionalidades esperadas no programa:
 #a) Cadastramento de perguntas e respostas;
 #b) Apresentação das perguntas cadastradas;
@@ -14,26 +15,59 @@ p1_r2 = input('Insira alteranativa de resposta 2: ')
 p1_r3 = input('Insira alteranativa de resposta 3: ')
 rcerta1 = int(input('Qual será a resposta correta? '))
 
-p2 = input('Digite uma pergunta sobre Segurança da Informação 2: ')
-p2_r1 = input('Insira alteranativa de resposta 1: ')
-p2_r2 = input('Insira alteranativa de resposta 2: ')
-p2_r3 = input('Insira alteranativa de resposta 3: ')
-rcerta2 = int(input('Qual será a resposta correta? '))
+# Valida se a respota correta foi informada entre 1 a 3
+if (rcerta1 <1 or rcerta1 >3):
+  while (rcerta1 <1) or (rcerta1>3):
+   print ("Inforação inválida!")
+   rcerta1 = int(input('Qual será a resposta correta? '))
 
-p3 = input('Digite uma pergunta sobre Segurança da Informação 3: ')
-p3_r1 = input('Insira alteranativa de resposta 1: ')
-p3_r2 = input('Insira alteranativa de resposta 2: ')
-p3_r3 = input('Insira alteranativa de resposta 3: ')
-rcerta3 = int(input('Qual será a resposta correta? '))
-
-
+#esse comando limpa a tela do console
 os.system('clear') or None
 
-user = input('Insira o Nome do Jogador: ')
-
+user = input('Insira seu nome: ')
 os.system('clear') or None
 
-print('Apresentação das Perguntas: \n \n')
+print('Pergunta de numer 1: \n')
+
+#apresentação pergunta 1
+print (p1 + '\n')
+
+print ('Opção 1: ' + p1_r1)
+print ('Opção 2: ' + p1_r2)
+print ('Opção 3: ' + p1_r3)
+print ('\n' + 'Para opção 1 digite o numeral 1, para opção digite o numeral 2 e para opção 3 digite o numeral 3 ')
+
+rusuario = int(input('\n' + 'Qual será a resposta correta? '))
+# Valide se o usuario digitou um numero de 1 a 3
+if (rusuario >= 1 and rusuario <= 3):
+  if (rusuario == rcerta1):
+    print ('\n' + 'Parabéns ' +user + ', você acertou!')
+    pontos += 20
+  else:
+    print ('\n' + 'Resporta incorreta')
+  
+# usuário digitou opção inválida - Vai inforamr o erro, e solicitar a pergunta novamente
+
+else:
+  while (rusuario <1) or (rusuario >3):
+    os.system('clear') or None
+    print ("Informação inválida, Você digitou: " + str(rusuario) + " favor informar uma opção válida") 
+    print (p1)
+    print ('\n')
+    print ('Opção 1: '+ p1_r1)
+    print ('Opção 2: '+ p1_r2)
+    print ('Opção 3: '+ p1_r3)
+    print ('\n')
+    print ('Para opção 1 digite o numeral 1, para opção 2 digite o numeral 2 e para opção 3 digite o numeral 3 ')
+
+    rusuario = int(input('Informe a alternativa correta? '))
+
+#mostra a quantidade de pontos até o momento
+print ('\n' + 'Você tem', + pontos, 'pontos')
+
+
+
+
 
 '''
 ptest = ("\n"
@@ -64,10 +98,4 @@ if (rtest == 1):
 #rtest = int(input("Informe a resposta correata: " )))
   
 
- 
-
-#input('Digite uma pergunta sobre Segurança da Informação: ')
-#p5_r1 = input('Insira alteranativa de resposta 1: ')
-#p5_r2 = input('Insira alteranativa de resposta 2: ')
-#p5_r3 = input('Insira alteranativa de resposta 3: ')
 '''
