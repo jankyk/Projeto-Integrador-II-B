@@ -1,5 +1,21 @@
 import os #importa parametros do windows
 
+'''
+def leiaInt(msg):
+  ok = False
+  valor = 0
+  while True:
+	  n =str(input(msg))
+	  if n.isnumeric():
+		  valor = int(n)
+		  ok = True    
+	  else:
+		  print("ERRO! Digite uma opção válida:")
+    if ok:
+      break
+  return valor
+  '''
+
 #Funcionalidades esperadas no programa:
 #a) Cadastramento de perguntas e respostas;
 #b) Apresentação das perguntas cadastradas;
@@ -8,6 +24,7 @@ import os #importa parametros do windows
 #e) Apresentação de informações sobre o resultado da escolha (correta ou incorreta);
 #f) Apresentação da quantidade de respostas corretas e pontuação total.
 pontos = 0
+qntrespostacerta = 0
 
 p1padrao = ("\n"
 "\n"
@@ -42,14 +59,18 @@ else:
   p1_r3 = input('Insira alteranativa de resposta 3: ')
   rcerta1 = int(input('Qual será a resposta correta? '))
 # Valida se a respota correta foi informada entre 1 a 3
-  if (rcerta1 < 1 or rcerta1 > 3):
-    while (rcerta1 < 1) or (rcerta1 > 3):
-     print ("Inforação inválida!")
+ # if rcerta1.isnumeric():
+  #  intok = true
+if ((rcerta1 < 1 or rcerta1 > 3)):
+  while (rcerta1 < 1) or (rcerta1 > 3):
+    print ("Inforação inválida!")
     rcerta1 = int(input('Qual será a resposta correta? '))
+#else:
+#    print("teste")
 
 #esse comando limpa a tela do console
 os.system('clear') or None
-'''
+
 #Pergunta 2
 p2 = input('Segurança da Informação: Cadastrar pergunta 2: ')
 p2_r1 = input('Insira alteranativa de resposta 1: ')
@@ -76,7 +97,7 @@ if (rcerta3 < 1 or rcerta3 > 3):
   while (rcerta3 < 1) or (rcerta3 > 3):
    print ("Inforação inválida!")
    rcerta3 = int(input('Qual será a resposta correta? '))
-'''
+
 os.system('clear') or None
 user = input('Insira seu nome: ')
 os.system('clear') or None
@@ -92,13 +113,16 @@ print ('Opção 3: ' + p1_r3)
 print ('\n' + 'Para opção 1 digite o numeral 1, para opção digite o numeral 2 e para opção 3 digite o numeral 3 ')
 
 rusuario = int(input('\n' + 'Qual será a resposta correta? '))
-# Valide se o usuario digitou um numero de 1 a 3
+
+# Valide se o usuario digitou um numero de 1 a 3 na pergunta 1
 if (rusuario >= 1 and rusuario <= 3):
   if (rusuario == rcerta1):
     pontos += 20
+    qntrespostacerta += 1
+    os.system('clear') or None
     print ('\n' + 'Parabéns ' +user + ', você acertou e está com ' + str(pontos) + ' pontos')
   else:
-    print ('\n' + 'Resporta incorreta')
+    print ('\n' + 'Resporta incorreta! '+user+'\n A resposta correta é: '+rcerta1)
   
 # usuário digitou opção inválida - Vai inforamr o erro, e solicitar a pergunta novamente
 
@@ -115,6 +139,7 @@ else:
     print ('Para opção 1 digite o numeral 1, para opção 2 digite o numeral 2 e para opção 3 digite o numeral 3 ')
     rusuario = int(input('Informe a alternativa correta? '))
 
+
 #apresentação pergunta 2:
 print('Pergunta de número 2: \n')
 
@@ -126,13 +151,17 @@ print ('Opção 3: ' + p2_r3)
 print ('\n' + 'Para opção 1 digite o numeral 1, para opção digite o numeral 2 e para opção 3 digite o numeral 3 ')
 
 rusuario = int(input('\n' + 'Qual será a resposta correta? '))
-# Valide se o usuario digitou um numero de 1 a 3
+
+# Valide se o usuario digitou um numero de 1 a 3 na pergunta 2
 if (rusuario >= 1 and rusuario <= 3):
   if (rusuario == rcerta2):
-    print ('\n' + 'Parabéns ' +user + ', você acertou!')
+    os.system('clear') or None
     pontos += 20
+    qntrespostacerta += 1
+    print ('\n' + 'Parabéns ' +user + ', você acertou e está com ' + str(pontos) + ' pontos')
+    
   else:
-    print ('\n' + 'Resporta incorreta')
+    print ('\n' + 'Resporta incorreta! '+user+'\n A resposta correta é: ',rcerta2)
   
 # usuário digitou opção inválida - Vai inforamr o erro, e solicitar a pergunta novamente
 
@@ -149,9 +178,6 @@ else:
     print ('Para opção 1 digite o numeral 1, para opção 2 digite o numeral 2 e para opção 3 digite o numeral 3 ')
     rusuario = int(input('Informe a alternativa correta? '))
 
-#mostra a quantidade de pontos até o momento
-print ('\n' + 'Você tem', + pontos, 'pontos')
-
 #apresentação pergunta 3:
 print('Pergunta de número 3: \n')
 
@@ -163,13 +189,16 @@ print ('Opção 3: ' + p3_r3)
 print ('\n' + 'Para opção 1 digite o numeral 1, para opção digite o numeral 2 e para opção 3 digite o numeral 3 ')
 
 rusuario = int(input('\n' + 'Qual será a resposta correta? '))
-# Valide se o usuario digitou um numero de 1 a 3
+
+# Valide se o usuario digitou um numero de 1 a 3 na resporta 3
 if (rusuario >= 1 and rusuario <= 3):
   if (rusuario == rcerta3):
-    print ('\n' + 'Parabéns ' +user + ', você acertou!')
+    os.system('clear') or None
     pontos += 20
+    qntrespostacerta += 1
+    print ('\n' + 'Parabéns ' +user + ', você acertou e está com ' + str(pontos) + ' pontos')
   else:
-    print ('\n' + 'Resporta incorreta')
+    print ('\n' + 'Resporta incorreta! '+user+'\n A resposta correta é: ',rcerta3)
   
 # usuário digitou opção inválida - Vai inforamr o erro, e solicitar a pergunta novamente
 
@@ -186,13 +215,7 @@ else:
     print ('Para opção 1 digite o numeral 1, para opção 2 digite o numeral 2 e para opção 3 digite o numeral 3 ')
     rusuario = int(input('Informe a alternativa correta? '))
 
-#mostra a quantidade de pontos até o momento
-print ('\n' + user + 'você fez', + pontos, 'pontos')
-
-rtest = int(input("Informe a resposta correta: " ))
-if (rtest == 1):
-  print ("\nVoce escolheu a respota:", rtest,)
-#else (print (ptest)
-#rtest = int(input("Informe a resposta correata: " )))
-  
-
+os.system('clear') or None
+#mostra a quantidade de pontos até o momento e tmbém a quantidade de respotas certas
+print ('Resultado final'+ '\n')
+print ('\n' + user + ', Você fez', + pontos, 'pontos! E teve um total de ',qntrespostacerta, 'acertos.')
