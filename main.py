@@ -1,3 +1,4 @@
+import os
 #Funcionalidades esperadas no programa:
 #a) Cadastramento de perguntas e respostas;
 #b) Apresentação das perguntas cadastradas;
@@ -5,26 +6,36 @@
 #d) Escolha de uma resposta;
 #e) Apresentação de informações sobre o resultado da escolha (correta ou incorreta);
 #f) Apresentação da quantidade de respostas corretas e pontuação total.
+pontos = 0
 
-#p1 = input('Digite uma pergunta sobre Segurança da Informação: ')
-#p1_r1 = input('Insira alteranativa de resposta 1: ')
-#p1_r2 = input('Insira alteranativa de resposta 2: ')
-#p1_r3 = input('Insira alteranativa de resposta 3: ')
-#respP1 = input(int('Qual o numero da resposta correta:?' ))
- #if respP1 == 1:
+p1 = input('Digite uma pergunta sobre Segurança da Informação 1: ')
+p1_r1 = input('Insira alteranativa de resposta 1: ')
+p1_r2 = input('Insira alteranativa de resposta 2: ')
+p1_r3 = input('Insira alteranativa de resposta 3: ')
+rcerta1 = int(input('Qual será a resposta correta? '))
 
-#p2 = input('Digite uma pergunta sobre Segurança da Informação: ')
-#p2_r1 = input('Insira alteranativa de resposta 1: ')
-#p2_r2 = input('Insira alteranativa de resposta 2: ')
-#p2_r3 = input('Insira alteranativa de resposta 3: ')
+p2 = input('Digite uma pergunta sobre Segurança da Informação 2: ')
+p2_r1 = input('Insira alteranativa de resposta 1: ')
+p2_r2 = input('Insira alteranativa de resposta 2: ')
+p2_r3 = input('Insira alteranativa de resposta 3: ')
+rcerta2 = int(input('Qual será a resposta correta? '))
 
-#p3 = input('Digite uma pergunta sobre Segurança da Informação: ')
-#p3_r1 = input('Insira alteranativa de resposta 1: ')
-#p3_r2 = input('Insira alteranativa de resposta 2: ')
-#p3_r3 = input('Insira alteranativa de resposta 3: ')
+p3 = input('Digite uma pergunta sobre Segurança da Informação 3: ')
+p3_r1 = input('Insira alteranativa de resposta 1: ')
+p3_r2 = input('Insira alteranativa de resposta 2: ')
+p3_r3 = input('Insira alteranativa de resposta 3: ')
+rcerta3 = int(input('Qual será a resposta correta? '))
 
-#print(p1)
 
+os.system('clear') or None
+
+user = input('Insira o Nome do Jogador: ')
+
+os.system('clear') or None
+
+print('Apresentação das Perguntas: \n \n')
+
+'''
 ptest = ("\n"
 "\n"
   "Paulo está efetuando uma auditoria na empresa BalasGoma com o intuito de diagnosticar vulnerabilidades e sugerir melhorias na segurança da informação. Paulo identificou que a empresa possui um datacenter onde estão localizados todos os servidores da instituição."
@@ -46,7 +57,7 @@ ptest = ("\n"
 
 print (ptest)
 
-rtest = int(input("Informe a resposta correata: " ))
+rtest = int(input("Informe a resposta correta: " ))
 if (rtest == 1):
   print ("\nVoce escolheu a respota:", rtest,)
 #else (print (ptest)
@@ -59,4 +70,4 @@ if (rtest == 1):
 #p5_r1 = input('Insira alteranativa de resposta 1: ')
 #p5_r2 = input('Insira alteranativa de resposta 2: ')
 #p5_r3 = input('Insira alteranativa de resposta 3: ')
-
+'''
