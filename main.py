@@ -223,4 +223,4 @@ else:
 os.system('clear') or None
 #mostra a quantidade de pontos até o momento e tmbém a quantidade de respotas certas
 print ('Resultado final:'+ '\n')
-print ('\n' + user + ', Você fez', + pontos, 'pontos! E teve um total de ',qntrespostacerta, 'acertos.')
+print ('\n' + user + ', Você fez', + pontos, 'pontos! E teve um total de',qntrespostacerta, 'acertos.')
