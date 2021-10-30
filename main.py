@@ -40,18 +40,18 @@ r2padrao = ("Efetuar a manutenção nos Nobreak periodicamente para garantir a i
 "\n")
 r3padrao = ("Limitar o controle de acesso a sala do datacenter somente as pessoas autorizadas, efetuar um inventário de hardware e software das maquinas no DC e implementar uma solução de firewall para filtrar e barrar os pacotes de conexão indesejados."
 "\n")
-certapadrao = 2
+r1certapadrao = 2
 
 
-#Pergunta 1
+# Solicita a Pergunta 1
 p1 = input('Segurança da Informação: Cadastrar pergunta 1: ')
-#testep1 = 
+#Valida 
 if (p1 == "p1padrao"):
   p1 = p1padrao
   p1_r1 = r1padrao
   p1_r2 = r2padrao
   p1_r3 = r3padrao
-  rcerta1 = certapadrao
+  rcerta1 = r1certapadrao
 
 else:
   p1_r1 = input('Insira alteranativa de resposta 1: ')
@@ -122,7 +122,8 @@ if (rusuario >= 1 and rusuario <= 3):
     os.system('clear') or None
     print ('\n' + 'Parabéns ' +user + ', você acertou e está com ' + str(pontos) + ' pontos')
   else:
-    print ('\n' + 'Resporta incorreta! '+user+'\n A resposta correta é: '+rcerta1)
+    os.system('clear') or None
+    print ('\n' + 'Resporta incorreta, '+user+'\nA resposta correta é: ', rcerta1)
   
 # usuário digitou opção inválida - Vai inforamr o erro, e solicitar a pergunta novamente
 
@@ -141,7 +142,8 @@ else:
 
 
 #apresentação pergunta 2:
-print('Pergunta de número 2: \n')
+print('-------------------------------')
+print('\n' + 'Pergunta de número 2: \n')
 
 print (p2 + '\n')
 
@@ -161,7 +163,8 @@ if (rusuario >= 1 and rusuario <= 3):
     print ('\n' + 'Parabéns ' +user + ', você acertou e está com ' + str(pontos) + ' pontos')
     
   else:
-    print ('\n' + 'Resporta incorreta! '+user+'\n A resposta correta é: ',rcerta2)
+    os.system('clear') or None
+    print ('\n' + 'Resporta incorreta, '+user+'\nA resposta correta é: ',rcerta2)
   
 # usuário digitou opção inválida - Vai inforamr o erro, e solicitar a pergunta novamente
 
@@ -179,7 +182,8 @@ else:
     rusuario = int(input('Informe a alternativa correta? '))
 
 #apresentação pergunta 3:
-print('Pergunta de número 3: \n')
+print('-------------------------------')
+print('\n' + 'Pergunta de número 3: \n')
 
 print (p3 + '\n')
 
@@ -198,7 +202,8 @@ if (rusuario >= 1 and rusuario <= 3):
     qntrespostacerta += 1
     print ('\n' + 'Parabéns ' +user + ', você acertou e está com ' + str(pontos) + ' pontos')
   else:
-    print ('\n' + 'Resporta incorreta! '+user+'\n A resposta correta é: ',rcerta3)
+    os.system('clear') or None
+    print ('\n' + 'Resporta incorreta, '+user+'\nA resposta correta é: ',rcerta3)
   
 # usuário digitou opção inválida - Vai inforamr o erro, e solicitar a pergunta novamente
 
@@ -217,5 +222,5 @@ else:
 
 os.system('clear') or None
 #mostra a quantidade de pontos até o momento e tmbém a quantidade de respotas certas
-print ('Resultado final'+ '\n')
+print ('Resultado final:'+ '\n')
 print ('\n' + user + ', Você fez', + pontos, 'pontos! E teve um total de ',qntrespostacerta, 'acertos.')
