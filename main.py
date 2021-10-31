@@ -1,20 +1,21 @@
 import os #importa parametros do windows
+import time #importa função timer / pause
 
-'''
+
 def leiaInt(msg):
-  ok = False
+  valida = False
   valor = 0
   while True:
-	  n =str(input(msg))
-	  if n.isnumeric():
-		  valor = int(n)
-		  ok = True    
-	  else:
-		  print("ERRO! Digite uma opção válida:")
-    if ok:
-      break
+   n =str(input(msg))
+   if n.isnumeric():
+    valor = int(n)
+    valida = True    
+   else:
+    print("ERRO! Digite uma opção válida: ")
+   if valida == True:
+    break
   return valor
-  '''
+
 
 #Funcionalidades esperadas no programa:
 #a) Cadastramento de perguntas e respostas;
@@ -57,16 +58,14 @@ else:
   p1_r1 = input('Insira alteranativa de resposta 1: ')
   p1_r2 = input('Insira alteranativa de resposta 2: ')
   p1_r3 = input('Insira alteranativa de resposta 3: ')
-  rcerta1 = int(input('Qual será a resposta correta? '))
+  rcerta1 = leiaInt('Qual será a resposta correta? ')
+
 # Valida se a respota correta foi informada entre 1 a 3
- # if rcerta1.isnumeric():
-  #  intok = true
 if ((rcerta1 < 1 or rcerta1 > 3)):
   while (rcerta1 < 1) or (rcerta1 > 3):
     print ("Inforação inválida!")
     rcerta1 = int(input('Qual será a resposta correta? '))
-#else:
-#    print("teste")
+
 
 #esse comando limpa a tela do console
 os.system('clear') or None
@@ -76,12 +75,14 @@ p2 = input('Segurança da Informação: Cadastrar pergunta 2: ')
 p2_r1 = input('Insira alteranativa de resposta 1: ')
 p2_r2 = input('Insira alteranativa de resposta 2: ')
 p2_r3 = input('Insira alteranativa de resposta 3: ')
-rcerta2 = int(input('Qual será a resposta correta? '))
+rcerta2 = leiaInt('Qual será a resposta correta? ')
+
 # Valida se a respota correta foi informada entre 1 a 3
 if (rcerta2 < 1 or rcerta2 > 3):
   while (rcerta2 < 1) or (rcerta2 > 3):
    print ("Inforação inválida!")
    rcerta2 = int(input('Qual será a resposta correta? '))
+
 
 #esse comando limpa a tela do console
 os.system('clear') or None
@@ -91,12 +92,14 @@ p3 = input('Segurança da Informação: Cadastrar pergunta 3: ')
 p3_r1 = input('Insira alteranativa de resposta 1: ')
 p3_r2 = input('Insira alteranativa de resposta 2: ')
 p3_r3 = input('Insira alteranativa de resposta 3: ')
-rcerta3 = int(input('Qual será a resposta correta? '))
+rcerta3 = leiaInt('Qual será a resposta correta? ')
+
 # Valida se a respota correta foi informada entre 1 a 3
 if (rcerta3 < 1 or rcerta3 > 3):
   while (rcerta3 < 1) or (rcerta3 > 3):
    print ("Inforação inválida!")
    rcerta3 = int(input('Qual será a resposta correta? '))
+
 
 os.system('clear') or None
 user = input('Insira seu nome: ')
@@ -140,7 +143,8 @@ else:
     print ('Para opção 1 digite o numeral 1, para opção 2 digite o numeral 2 e para opção 3 digite o numeral 3 ')
     rusuario = int(input('Informe a alternativa correta? '))
 
-
+time.sleep(6) #função de espera
+os.system('clear') or None
 #apresentação pergunta 2:
 print('-------------------------------')
 print('\n' + 'Pergunta de número 2: \n')
@@ -181,6 +185,8 @@ else:
     print ('Para opção 1 digite o numeral 1, para opção 2 digite o numeral 2 e para opção 3 digite o numeral 3 ')
     rusuario = int(input('Informe a alternativa correta? '))
 
+time.sleep(6) #função de espera
+os.system('clear') or None
 #apresentação pergunta 3:
 print('-------------------------------')
 print('\n' + 'Pergunta de número 3: \n')
@@ -220,7 +226,8 @@ else:
     print ('Para opção 1 digite o numeral 1, para opção 2 digite o numeral 2 e para opção 3 digite o numeral 3 ')
     rusuario = int(input('Informe a alternativa correta? '))
 
+time.sleep(6) #função de espera
 os.system('clear') or None
 #mostra a quantidade de pontos até o momento e tmbém a quantidade de respotas certas
-print ('Resultado final:'+ '\n')
-print ('\n' + user + ', Você fez', + pontos, 'pontos! E teve um total de',qntrespostacerta, 'acertos.')
+print ('Resultado final:')
+print ( user + ', Você fez', + pontos, 'pontos! O total de acertos é =',qntrespostacerta)
