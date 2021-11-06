@@ -45,7 +45,7 @@ r3padrao_p2 = ('Engenharia Social, a solução é realizar treinamento com os co
 r1certapadrao_p2 = 3
 
 #Pergunta 3 padrão
-p3padrao = ('\nA empresa DeixaComigo prestadora de serviços, oferece variados serviços como Desenvolvimento de Softwares, Pesquisa e Gerenciamento de Grandes Volumes de Dados e Gestão de Tranferências Eletrônicas (TEF), a empresa já adotou um conjunto de requisitos, processos e controles que minimizam o risco da organização garantindo a proteção de pesquisas e dados de software, informações empresariais e além dos dados de clientes fisicos e jurídicos que passam pela empresa e assim viabilizando um Sistema de Gestão de Segurança da Informação.\nA empresa resolveu se certificar segundo uma Norma da famila ISO 27000, A certificação que rege esse SGSI é:\n')
+p3padrao = ('\nA empresa DeixaComigo prestadora de serviços, oferece variados serviços como Desenvolvimento de Softwares, Pesquisa e Gerenciamento de Grandes Volumes de Dados e Gestão de Transferências Eletrônicas (TEF), a empresa já adotou um conjunto de requisitos, processos e controles que minimizam o risco da organização garantindo a proteção de pesquisas e dados de software, informações empresariais e além dos dados de clientes fisicos e jurídicos que passam pela empresa e assim viabilizando um Sistema de Gestão de Segurança da Informação.\nA empresa resolveu se certificar segundo uma Norma da famila ISO 27000, A certificação que rege esse SGSI é:\n')
 
 r1padrao_p3 = ('Certificação ISO 27005''\n')
 r2padrao_p3 = ('Certificação ISO 27001''\n')
